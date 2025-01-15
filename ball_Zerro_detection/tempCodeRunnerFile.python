@@ -1,0 +1,20 @@
+import PyPDF2
+
+def read_pdf(file_path):
+    text = ""
+    with open(file_path, 'rb') as file:
+        reader = PyPDF2.PdfFileReader(file)
+        num_pages = reader.numPages
+        for page_num in range(num_pages):
+            page = reader.getPage(page_num)
+            text += page.extractText()
+    return text
+
+def main():
+    file_path = input("Enter the path to the PDF file: ")
+    pdf_text = read_pdf(file_path)
+    print("PDF Content:")
+    print(pdf_text)
+
+if __name__ == "__main__":
+    main()

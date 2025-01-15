@@ -1,0 +1,11 @@
+.DS_Store
+videos/frames/
+videos/gradients/
+.idea/
+__pycache__/
+*.pkl
+*.pyc
+*.zip
+*.txt
+output/
+cut/
